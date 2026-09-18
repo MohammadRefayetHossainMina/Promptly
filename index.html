@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Promptly — Find the right prompt, fast, every time.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#top" aria-label="Promptly home">
+      <span class="brand-name">Promptly</span>
+    </a>
+    <button class="navbar-toggle" aria-label="Open menu" aria-expanded="false">
+      <span class="navbar-toggle-icon"></span>
+    </button>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#library" class="nav-link">Add a prompt</a>
+      <button class="btn btn-primary">Save Prompt</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <p class="hero-chip">Save → Search → Copy</p>
+      <h1 class="hero-title">Find the right prompt —<br /><span class="hero-accent">fast, every time.</span></h1>
+      <p class="hero-sub">
+        We help developers and creators who struggle with scattered AI prompts — a personal library to save, search, and copy in seconds.
+      </p>
+      <a href="#library" class="btn btn-primary btn-lg">Save your first prompt</a>
+
+      <div class="hero-card" aria-hidden="true">
+        <div class="hero-card-top">
+          <span class="hero-card-title">cursor · git commit</span>
+          <button class="btn btn-primary btn-sm" tabindex="-1">Copy</button>
+        </div>
+        <div class="hero-card-text">
+          <p class="hero-card-line"></p>
+          <p class="hero-card-line"></p>
+          <p class="hero-card-line hero-card-line-short"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section problem" id="problem" aria-labelledby="problem-title">
+      <h2 class="section-title" id="problem-title">Where did that prompt go?</h2>
+      <ul class="section-list">
+        <li>Great prompts are scattered across messy local files — and rebuilt from memory every time.</li>
+        <li>The loop that wastes your time: <strong>remember → find → copy</strong>.</li>
+      </ul>
+    </section>
+
+    <section class="section solution" id="solution" aria-labelledby="solution-title">
+      <h2 class="section-title" id="solution-title">One home for every prompt that works.</h2>
+      <ul class="section-list">
+        <li>Save a prompt once with a clear title; search everything instantly; copy it back into any AI tool with one click.</li>
+        <li>Everything stays in your browser — no account, no backend, no one reading your prompts.</li>
+      </ul>
+    </section>
+
+    <section class="section features" id="features" aria-labelledby="features-title">
+      <h2 class="section-title" id="features-title">Save, find, copy — the whole loop in three moves.</h2>
+      <div class="feature-grid">
+        <article class="feature-card reveal">
+          <span class="feature-step">1</span>
+          <h3 class="feature-name">Save in seconds</h3>
+          <p class="feature-text">Title + text, done. Your library persists automatically in your browser.</p>
+        </article>
+        <article class="feature-card reveal">
+          <span class="feature-step">2</span>
+          <h3 class="feature-name">Search instantly</h3>
+          <p class="feature-text">Start typing a keyword and prompts filter as you type.</p>
+        </article>
+        <article class="feature-card reveal">
+          <span class="feature-step">3</span>
+          <h3 class="feature-name">Copy with one click</h3>
+          <p class="feature-text">Paste straight into ChatGPT, Cursor, or Gemini.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section proof" id="proof" aria-labelledby="proof-title">
+      <h2 class="section-title" id="proof-title">Built for a workflow that actually works.</h2>
+      <p class="proof-text">No account. Runs in your browser.</p>
+      <span class="proof-chip">For developers, makers, game creators, and freelancers.</span>
+    </section>
+
+    <section class="section cta" id="library" aria-labelledby="cta-title">
+      <h2 class="section-title" id="cta-title">Start your library today.</h2>
+      <p class="cta-sub">Save your first prompt, find it in seconds, copy it anywhere.</p>
+      <a href="#library" class="btn btn-primary btn-lg">Save Prompt</a>
+
+      <div class="prompt-card">
+        <div class="prompt-card-top">
+          <span class="prompt-card-title">cursor · git commit</span>
+          <button class="btn btn-primary btn-sm" id="demo-copy" type="button">Copy</button>
+        </div>
+        <p class="prompt-card-text">Write a clear, well-structured git commit message based on the diff I provide — explain what changed and why.</p>
+      </div>
+
+      <div class="library">
+        <form class="prompt-form" id="prompt-form" autocomplete="off">
+          <h3 class="library-title">Save a prompt</h3>
+          <label class="field-label" for="prompt-title">Title</label>
+          <input class="field-input" type="text" id="prompt-title" placeholder="e.g. cursor · git commit" />
+          <label class="field-label" for="prompt-text">Prompt text</label>
+          <textarea class="field-input" id="prompt-text" rows="4" placeholder="Paste the prompt you want to keep…"></textarea>
+          <p class="form-note" id="form-note" role="alert"></p>
+          <button class="btn btn-primary" type="submit">Save Prompt</button>
+        </form>
+
+        <div class="saved" id="saved-prompts">
+          <h3 class="library-title">Saved prompts</h3>
+          <p class="empty-state" id="empty-state">No prompts yet. Save your first one above.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-brand">© 2026 Promptly</p>
+    <p class="footer-tagline">Find the right prompt — fast, every time.</p>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="#problem">Problem</a>
+      <a href="#features">Features</a>
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
