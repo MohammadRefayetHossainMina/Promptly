@@ -2,7 +2,7 @@
 
 **Owner:** Founder (lead decision-maker)
 **Status:** Active
-**Last updated:** 2026-09-17
+**Last updated:** 2026-09-19
 
 > This document is the single source of truth for the Promptly startup project.
 > It defines the concept, records decisions, and serves as the working brief that
@@ -10,11 +10,26 @@
 
 ---
 
-## Project Links
+## Project Overview & Links
+
+**Startup Name:** Promptly — *"Find the right prompt — fast, every time."*
+
+### Executive Summary
+
+Developers and creators across software, mobile, and game development rely on several AI tools (ChatGPT, Cursor, Gemini) and continually lose their best prompts in scattered local files — so they rebuild them from memory each time. Promptly ends that waste: save a prompt once, find it instantly, and copy it into any AI tool in a single click.
+
+### Problem
+
+Prompt sprawl. Proven prompts are buried in disorganized local files with no structure, templates, or version history. The repeating loop — *remember → find → copy* — costs time on every reuse.
+
+### Solution
+
+Promptly is a frontend-only web application built around the **Save → Search → Copy** workflow. Each prompt is stored with a clear title, found instantly as you type, and copied to the clipboard in one click for direct use in ChatGPT, Cursor, or Gemini. Everything runs entirely in the browser and persists in `localStorage` — no account, no backend, and no API keys to expose.
+
+### Links
 
 | Item | Link |
 | :--- | :--- |
-| **Startup Name** | Promptly |
 | **GitHub Repository** | https://github.com/MohammadRefayetHossainMina/Promptly |
 | **GitHub Pages** | https://mohammadrefayethossainmina.github.io/Promptly/ |
 | **Deployed Site** | https://savageexit-idiomdynamic-3000.codio.io/ |
