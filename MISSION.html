@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Founder Notebook — Promptly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Geist:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --color-background:    #EEEEEE;
+      --color-surface:       rgba(149, 100, 221, 0.22);
+      --color-surface-hover: rgba(149, 100, 221, 0.32);
+      --color-border:        rgba(62, 15, 141, 0.25);
+      --color-primary:       #3E0F8D;
+      --color-accent:        #E4DA72;
+      --color-text:          #3E0F8D;
+      --color-text-muted:    rgba(62, 15, 141, 0.7);
+      --font-heading: 'Sora', sans-serif;
+      --font-body: 'Geist', sans-serif;
+      --radius-btn: 10px;
+      --radius-box: 14px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      background-color: var(--color-background);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px 64px;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-heading);
+      line-height: 1.25;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      padding-bottom: 8px;
+      border-bottom: 3px solid var(--color-accent);
+      margin-bottom: 16px;
+    }
+
+    h3 { font-size: 1.15rem; margin: 24px 0 8px; }
+    h4 { font-size: 1rem; margin: 20px 0 8px; }
+
+    p { margin: 8px 0; }
+    ul, ol { margin: 8px 0 8px 24px; }
+    li { margin: 4px 0; }
+    strong { font-weight: 500; }
+
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+      border-bottom: 1px solid var(--color-border);
+      transition: color 150ms ease, border-color 150ms ease;
+    }
+    a:hover { border-color: var(--color-primary); }
+
+    code {
+      font-family: var(--font-body);
+      font-size: 0.9em;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-btn);
+      padding: 1px 6px;
+    }
+
+    .card {
+      background-color: #fff;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-box);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .hero-card {
+      background-color: var(--color-surface);
+      border-color: rgba(62, 15, 141, 0.35);
+    }
+
+    .hero-card h1 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .meta {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      margin: 0 0 16px;
+    }
+    .meta strong { color: var(--color-text); }
+
+    .quote {
+      background-color: var(--color-surface);
+      border-left: 4px solid var(--color-accent);
+      border-radius: 0 var(--radius-btn) var(--radius-btn) 0;
+      padding: 12px 16px;
+      margin: 16px 0;
+      font-size: 0.95rem;
+    }
+    .quote p { margin: 0; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      border: 1px solid var(--color-border);
+      padding: 8px 12px;
+    }
+
+    th {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.85rem;
+      background-color: var(--color-surface);
+    }
+
+    tr:nth-child(even) td { background-color: rgba(62, 15, 141, 0.04); }
+
+    .badge {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 600;
+      background-color: var(--color-accent);
+      color: var(--color-text);
+      border-radius: var(--radius-btn);
+      padding: 2px 10px;
+      margin-bottom: 12px;
+      letter-spacing: 0.04em;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      margin-top: 32px;
+    }
+
+    .links-table a { word-break: break-all; }
+
+    @media (max-width: 560px) {
+      .wrap { padding: 24px 16px 40px; }
+      .card { padding: 16px; }
+      .hero-card h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+
+    <!-- Header -->
+    <section class="card hero-card">
+      <span class="badge">Founder Notebook</span>
+      <h1>Promptly</h1>
+      <p class="meta">
+        <strong>Owner:</strong> Founder (lead decision-maker) &nbsp;·&nbsp;
+        <strong>Status:</strong> Active &nbsp;·&nbsp;
+        <strong>Last updated:</strong> 2026-09-19
+      </p>
+      <div class="quote">
+        <p>This document is the single source of truth for the Promptly startup project. It defines the concept, records decisions, and serves as the working brief that guides OpenCode across all stages of the build.</p>
+      </div>
+    </section>
+
+    <!-- Project Overview & Links -->
+    <section class="card">
+      <h2>Project Overview &amp; Links</h2>
+      <p><strong>Startup Name:</strong> Promptly — <em>"Find the right prompt — fast, every time."</em></p>
+
+      <h3>Executive Summary</h3>
+      <p>Developers and creators across software, mobile, and game development rely on several AI tools (ChatGPT, Cursor, Gemini) and continually lose their best prompts in scattered local files — so they rebuild them from memory each time. Promptly ends that waste: save a prompt once, find it instantly, and copy it into any AI tool in a single click.</p>
+
+      <h3>Problem</h3>
+      <p>Prompt sprawl. Proven prompts are buried in disorganized local files with no structure, templates, or version history. The repeating loop — <em>remember → find → copy</em> — costs time on every reuse.</p>
+
+      <h3>Solution</h3>
+      <p>Promptly is a frontend-only web application built around the <strong>Save → Search → Copy</strong> workflow. Each prompt is stored with a clear title, found instantly as you type, and copied to the clipboard in one click for direct use in ChatGPT, Cursor, or Gemini. Everything runs entirely in the browser and persists in <code>localStorage</code> — no account, no backend, and no API keys to expose.</p>
+
+      <h3>Links</h3>
+      <table class="links-table">
+        <thead>
+          <tr><th>Item</th><th>Link</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>GitHub Repository</strong></td><td><a href="https://github.com/MohammadRefayetHossainMina/Promptly">https://github.com/MohammadRefayetHossainMina/Promptly</a></td></tr>
+          <tr><td><strong>GitHub Pages</strong></td><td><a href="https://mohammadrefayethossainmina.github.io/Promptly/">https://mohammadrefayethossainmina.github.io/Promptly/</a></td></tr>
+          <tr><td><strong>Deployed Site</strong></td><td><a href="https://savageexit-idiomdynamic-3000.codio.io/">https://savageexit-idiomdynamic-3000.codio.io/</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section 1 -->
+    <section class="card">
+      <h2>1. Vision &amp; Problem Discovery</h2>
+      <p><em>Foundation: Knowledge → Problem → Solution → Value → Product</em></p>
+
+      <h3>1.1 Domain / Industry</h3>
+      <p>Developer productivity — prompt management for creative and development workflows.</p>
+
+      <h3>1.2 Target Audience</h3>
+      <table>
+        <thead><tr><th>Tier</th><th>Audience</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Primary</strong></td><td>The founder — a developer working across software development, mobile applications, and game engines (Unity, Godot, Unreal Engine), plus 3D creation in Blender.</td></tr>
+          <tr><td><strong>Secondary</strong></td><td>Freelance developers and creators who use the same set of tools and lose productive prompts in the process.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>1.3 Core Problem</h3>
+      <p><strong>Prompt sprawl.</strong> Prompts for different AI tools (ChatGPT, Cursor, Gemini) and across different domains (application code, mobile apps, game development, 3D models) are scattered across disorganized local files. There is no structure, no reusable templates, and no version history. Reusing a proven prompt means searching through messy folders or rewriting it from memory.</p>
+      <div class="quote"><p><strong>v1 Framing:</strong> A single, repetitive loop — <em>remember → find → copy</em>. The founder forgets the good prompts already written, cannot find them when needed, and loses time restoring them into AI tools.</p></div>
+
+      <h3>1.4 Proposed Solution</h3>
+      <p>A personal Prompt Library — a frontend-only web application to save, tag, search, and reuse prompts, with reusable templates organized by domain, engine, or task type.</p>
+      <div class="quote"><p><strong>v1 Scope:</strong> A one-page prompt library built around the core loop <strong>Save → Search → Copy</strong> — save a prompt with a title, search all saved prompts instantly, and copy a prompt to the clipboard in one click. Persisted in <code>localStorage</code>. No backend, no accounts.</p></div>
+
+      <h3>1.5 Value Proposition</h3>
+      <p>A document, wiki, or notes app only <em>stores text</em>. Promptly is a structured workspace designed around the real workflow of using prompts: finding the right prompt quickly, adapting it from a template, and retaining the history of what worked — all without a backend and without exposing API keys.</p>
+
+      <h3>1.6 Idea Filter Evaluation (5-Point)</h3>
+      <table>
+        <thead><tr><th>Criterion</th><th>Assessment</th><th>Verdict</th></tr></thead>
+        <tbody>
+          <tr><td><strong>User</strong> (Who?)</td><td>Specific group: developers and creators juggling multiple AI tools (ChatGPT, Cursor, Gemini) across software, mobile, and game engines (Unity, Godot, Unreal, Blender)</td><td>Pass</td></tr>
+          <tr><td><strong>Problem</strong> (What hurts?)</td><td>Prompt sprawl — proven prompts buried in disorganized local files, rebuilt from scratch each time, with no templates or history</td><td>Pass</td></tr>
+          <tr><td><strong>Value</strong> (Why care?)</td><td>Find the right prompt in seconds, adapt from a template, and keep a history of what worked — saves time and keeps output consistent</td><td>Pass</td></tr>
+          <tr><td><strong>Feasibility</strong> (Can you showcase it?)</td><td>Core mechanics (organize, search, copy) are demonstrable in a frontend-only UI prototype with <code>localStorage</code></td><td>Pass</td></tr>
+          <tr><td><strong>Clarity</strong> (Can you pitch it?)</td><td>"A prompt library that saves, searches, and copies your AI prompts" — one jargon-free sentence</td><td>Pass</td></tr>
+        </tbody>
+      </table>
+
+      <h3>1.7 Scoped-Down v1 (confirmed 2026-09-17)</h3>
+      <p>Following challenge review, the concept was deliberately reduced. <strong>Cut from v1:</strong> version history, per-engine template packages (Unity/Godot/Unreal/Blender), tags and folders, freelancer-facing workflows, and API integration.</p>
+      <table>
+        <thead><tr><th>Element</th><th>Confirmed v1 Decision</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Audience</strong></td><td>The founder — a solo developer and creator across software, mobile, and game projects (Unity, Godot, Unreal, Blender), relying on several AI tools (ChatGPT, Cursor, Gemini), who keeps losing or rewriting the best prompts. Freelancers are a possible future audience, not a v1 target.</td></tr>
+          <tr><td><strong>Core feature</strong></td><td>The Save → Search → Copy loop — save a prompt with a title, search all saved prompts instantly, copy the right one to the clipboard in one click. Data persists in <code>localStorage</code>.</td></tr>
+          <tr><td><strong>Primary CTA</strong></td><td>The <strong>Copy</strong> button on every saved prompt — one click copies the prompt text for pasting into ChatGPT, Cursor, or Gemini. Secondary action: <strong>Save Prompt</strong>.</td></tr>
+          <tr><td><strong>20-Second Pitch</strong></td><td><em>"A personal library for your best AI prompts. Save a prompt once, find it again in seconds, and copy it into ChatGPT, Cursor, or Gemini with one click — everything stays in your browser, with no account and no backend."</em></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="card">
+      <h2>2. Official Founder Decision</h2>
+      <div class="quote"><p><strong>Positioning Statement:</strong> We help <strong>developers and creators</strong> who struggle with <strong>scattered, disorganized AI prompts</strong> by providing <strong>a personal prompt library</strong>, helping them <strong>find and reuse their best prompts in seconds</strong>.</p></div>
+      <p><strong>Status:</strong> Confirmed 2026-09-17 after passing the 5-Point Idea Filter.</p>
+      <p>This statement is the single source of truth for product direction and prevents feature creep during the build. Any future change of direction must be recorded in the Decision Log first.</p>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="card">
+      <h2>3. Visual Identity &amp; Design System</h2>
+      <p><em>Locked in 2026-09-17. Every design decision traces back to the brand personality words below.</em></p>
+
+      <h3>Brand Personality / Tone of Voice</h3>
+      <p><strong>Clear, Calm, Organized</strong> — the UI feels focused and uncluttered, friendly to a solo developer working across dev, mobile, and game tools.</p>
+      <ul>
+        <li><strong>Product Name:</strong> <strong>Promptly</strong></li>
+        <li><strong>Tagline:</strong> <em>"Find the right prompt — fast, every time."</em></li>
+      </ul>
+
+      <h3>Color Palette (Option 2 — "Calm Dark")</h3>
+      <table>
+        <thead><tr><th>Token</th><th>Hex</th></tr></thead>
+        <tbody>
+          <tr><td>Background</td><td><code>#1E2024</code></td></tr>
+          <tr><td>Surface / Card</td><td><code>#2A2D33</code></td></tr>
+          <tr><td>Primary</td><td><code>#7FA6C9</code> (soft blue)</td></tr>
+          <tr><td>Accent</td><td><code>#6EC6B8</code> (muted teal)</td></tr>
+          <tr><td>Text (primary)</td><td><code>#E8EAED</code></td></tr>
+          <tr><td>Text (muted)</td><td><code>#9AA0A9</code></td></tr>
+        </tbody>
+      </table>
+
+      <h3>Typography</h3>
+      <table>
+        <thead><tr><th>Role</th><th>Font</th></tr></thead>
+        <tbody>
+          <tr><td>Headings</td><td>Sora — modern, friendly, slightly geometric</td></tr>
+          <tr><td>Body</td><td>Geist — clean, neutral, highly readable</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Button Styles</h3>
+      <p>Two button styles are used consistently across the site.</p>
+      <p><strong>Primary button</strong> — the main action (e.g., "Save Prompt", "Copy").</p>
+      <ul>
+        <li>Teal background (<code>#6EC6B8</code>), dark text (<code>#1E2024</code>)</li>
+        <li>Rounded corners (10px), comfortably sized padding</li>
+      </ul>
+      <p><strong>Secondary button</strong> — a lesser action (e.g., "Cancel") or a link-style button.</p>
+      <ul>
+        <li>Transparent background, thin gray outline (<code>#3A3F47</code>)</li>
+        <li>Light text (<code>#E8EAED</code>)</li>
+      </ul>
+      <p><strong>Hover behavior:</strong></p>
+      <ul>
+        <li>Primary buttons get slightly lighter</li>
+        <li>Secondary buttons fill with a light gray background (<code>#2A2D33</code>)</li>
+        <li>Both transition smoothly in ~0.15s</li>
+      </ul>
+      <p>Rule of thumb: when unsure, err on consistency — same colors, same corners, same hover feel everywhere.</p>
+
+      <h3>Geometry &amp; Layout Rules</h3>
+      <ul>
+        <li><strong>Corner roundness:</strong> cards and buttons use <code>10px</code>; large containers (e.g., the main page panel) use <code>14px</code>; small elements stay subtly rounded.</li>
+        <li><strong>Spacing:</strong> use only values from this scale — <code>4px, 8px, 16px, 24px, 32px, 48px</code>.</li>
+        <li><strong>Consistency:</strong> every section reuses the same corners, spacing, colors, and fonts.</li>
+      </ul>
+
+      <h3>3.1 Base Shell — CSS Token Mini-Spec</h3>
+      <p><em>Approved 2026-09-17. Specifies the base shell: <code>index.html</code> shell and <code>style.css</code> design tokens. Every component built later must use these variables — never hardcoded values. Feature spec: <code>SPECS/2026-09-17-base-shell/</code> (requirements.md, plan.md, validation.md).</em></p>
+      <p><strong>Goal:</strong> a clean, semantic HTML skeleton plus the full set of CSS variables, ready for the Navbar and Hero (Layer 2). No components yet — just the foundation.</p>
+
+      <h4>Fonts (loaded from Google Fonts in <code>&lt;head&gt;</code>)</h4>
+      <ul>
+        <li><code>--font-heading: 'Sora', sans-serif</code> — headings only</li>
+        <li><code>--font-body: 'Geist', sans-serif</code> — body text</li>
+        <li>Load both with <code>display=swap</code>; fallback <code>sans-serif</code>.</li>
+      </ul>
+
+      <h4>Color Tokens</h4>
+      <table>
+        <thead><tr><th>CSS variable</th><th>Value</th><th>Use</th></tr></thead>
+        <tbody>
+          <tr><td><code>--color-background</code></td><td><code>#1E2024</code></td><td>page background</td></tr>
+          <tr><td><code>--color-surface</code></td><td><code>#2A2D33</code></td><td>cards, panels</td></tr>
+          <tr><td><code>--color-surface-hover</code></td><td><code>#2A2D33</code></td><td>secondary button hover fill</td></tr>
+          <tr><td><code>--color-border</code></td><td><code>#3A3F47</code></td><td>secondary button outline</td></tr>
+          <tr><td><code>--color-primary</code></td><td><code>#7FA6C9</code></td><td>links, highlights</td></tr>
+          <tr><td><code>--color-accent</code></td><td><code>#6EC6B8</code></td><td>primary buttons, key accents</td></tr>
+          <tr><td><code>--color-accent-hover</code></td><td>lighter than <code>#6EC6B8</code></td><td>primary button hover</td></tr>
+          <tr><td><code>--color-text</code></td><td><code>#E8EAED</code></td><td>primary text</td></tr>
+          <tr><td><code>--color-text-muted</code></td><td><code>#9AA0A9</code></td><td>secondary text</td></tr>
+        </tbody>
+      </table>
+
+      <h4>Spacing Scale</h4>
+      <table>
+        <thead><tr><th>CSS variable</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td><code>--space-1</code></td><td><code>4px</code></td></tr>
+          <tr><td><code>--space-2</code></td><td><code>8px</code></td></tr>
+          <tr><td><code>--space-3</code></td><td><code>16px</code></td></tr>
+          <tr><td><code>--space-4</code></td><td><code>24px</code></td></tr>
+          <tr><td><code>--space-5</code></td><td><code>32px</code></td></tr>
+          <tr><td><code>--space-6</code></td><td><code>48px</code></td></tr>
+        </tbody>
+      </table>
+      <p>Use only these six values for gaps and margins.</p>
+
+      <h4>Border Radius</h4>
+      <table>
+        <thead><tr><th>CSS variable</th><th>Value</th><th>Use</th></tr></thead>
+        <tbody>
+          <tr><td><code>--radius-btn</code></td><td><code>10px</code></td><td>cards + buttons</td></tr>
+          <tr><td><code>--radius-box</code></td><td><code>14px</code></td><td>large containers, main panel</td></tr>
+        </tbody>
+      </table>
+
+      <h4>Buttons</h4>
+      <ul>
+        <li><strong>Primary:</strong> background <code>--color-accent</code>, text <code>--color-background</code>, radius <code>var(--radius-btn)</code>; hover slightly lighter, <code>150ms</code> transition.</li>
+        <li><strong>Secondary:</strong> transparent background, 1px outline <code>--color-border</code>, text <code>--color-text</code>; hover fills with <code>--color-surface-hover</code>, <code>150ms</code> transition.</li>
+      </ul>
+
+      <h4>Base Shell Requirements</h4>
+      <ul>
+        <li>Semantic shell only: <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code> placeholders in <code>index.html</code>; no section content yet.</li>
+        <li><code>index.html</code> loads Sora + Geist from Google Fonts in <code>&lt;head&gt;</code>, then <code>style.css</code>.</li>
+        <li><code>style.css</code> defines all tokens above in <code>:root</code> plus a light reset (box-sizing, margins, body defaults tied to tokens).</li>
+        <li>Shell renders with the dark <code>#1E2024</code> background and Sora headings.</li>
+      </ul>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="card">
+      <h2>4. Website Structure &amp; Page Architecture</h2>
+      <p><em>Approved 2026-09-17 — see the full section-by-section outline below.</em></p>
+      <ul>
+        <li><strong>Primary Goal / Conversion Action:</strong> Open the app and save the first prompt. Primary button reads <strong>Save Prompt</strong>; every card carries a <strong>Copy</strong> button for one-click use.</li>
+        <li><strong>Sections:</strong> Navbar → Hero → Problem → Solution → Features → Social Proof → Final CTA → Footer.</li>
+      </ul>
+
+      <h3>Navbar</h3>
+      <ul>
+        <li>Logo "Promptly" + tagline mark, one link ("Add a prompt"), and the primary <strong>Save Prompt</strong> button.</li>
+        <li><strong>Why:</strong> one action, no clutter — matches the brand personality (Clear, Calm, Organized).</li>
+      </ul>
+
+      <h3>Hero</h3>
+      <div class="quote"><p><strong>Headline:</strong> <em>Find the right prompt — fast, every time.</em></p></div>
+      <ul>
+        <li><strong>Subheadline:</strong> "Promptly is a personal library for your AI prompts. Save one once, search it in seconds, and copy it into ChatGPT, Cursor, or Gemini with one click."</li>
+        <li><strong>CTA:</strong> <strong>Save your first prompt</strong> — scrolls the visitor to the library.</li>
+        <li><strong>Supporting visual:</strong> a small mock of a prompt card with a Copy button.</li>
+      </ul>
+
+      <h3>Problem</h3>
+      <div class="quote"><p><strong>Headline:</strong> <em>Where did that prompt go?</em></p></div>
+      <ul>
+        <li>Proven prompts are scattered across messy local files — and rebuilt from memory every time.</li>
+        <li>The waste loop: <em>remember → find → copy</em>.</li>
+      </ul>
+
+      <h3>Solution</h3>
+      <div class="quote"><p><strong>Headline:</strong> <em>One home for every prompt that works.</em></p></div>
+      <ul>
+        <li>Save a prompt once with a clear title; search everything instantly; copy it into any AI tool with one click.</li>
+        <li>Everything stays in the browser — no account, no backend, no one reading the prompts.</li>
+      </ul>
+
+      <h3>Features (three value pillars)</h3>
+      <div class="quote"><p><strong>Headline:</strong> <em>Save, find, copy — the whole loop in three moves.</em></p></div>
+      <ol>
+        <li><strong>Save in seconds</strong> — title + text, done. Your library persists automatically in your browser.</li>
+        <li><strong>Search instantly</strong> — start typing and prompts filter as you type.</li>
+        <li><strong>Copy with one click</strong> — paste straight into ChatGPT, Cursor, or Gemini.</li>
+      </ol>
+
+      <h3>Social Proof (kept light — no fake testimonials)</h3>
+      <div class="quote"><p><strong>Headline:</strong> <em>Built for a workflow that actually works.</em></p></div>
+      <ul>
+        <li>"No account. Runs in your browser."</li>
+        <li>Positioning chip: <em>For developers, makers, and game creators.</em></li>
+      </ul>
+
+      <h3>Final CTA</h3>
+      <div class="quote"><p><strong>Headline:</strong> <em>Start your library today.</em></p></div>
+      <ul>
+        <li><strong>Subheadline:</strong> "Save your first prompt, find it in seconds, copy it anywhere."</li>
+        <li><strong>Button:</strong> <strong>Save Prompt</strong>.</li>
+      </ul>
+
+      <h3>Footer</h3>
+      <ul>
+        <li>Copyright "Promptly", tagline, and links back to sections (Problem, Features).</li>
+      </ul>
+    </section>
+
+    <!-- Section 5 -->
+    <section class="card">
+      <h2>5. Decision Log</h2>
+      <p><em>Cycle: Think → Ask → Evaluate → Decide → Build</em></p>
+      <table>
+        <thead><tr><th>Date</th><th>Topic</th><th>Options Considered</th><th>Final Decision &amp; Rationale</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>2026-09-17</td><td>Problem to explore</td><td>Prompt sprawl across dev/game tools; alternative ideas surfaced during discovery interview</td><td>Prompt Library — aligns with personal pain, existing domain expertise, and a clear gap in current tooling</td><td>Done — confirmed</td></tr>
+          <tr><td>2026-09-17</td><td>Founder decision</td><td>Wording variants for the positioning statement</td><td>"We help developers and creators who struggle with scattered, disorganized AI prompts by providing a personal prompt library, helping them find and reuse their best prompts in seconds." — passed the 5-Point Idea Filter</td><td>Done — confirmed</td></tr>
+          <tr><td>2026-09-17</td><td>v1 scope-down</td><td>Full feature set (templates, versioning, tags, API) vs. minimum core loop</td><td>Save → Search → Copy only; version history, per-engine templates, tags/folders, and API integration deferred or cut</td><td>Done — confirmed</td></tr>
+          <tr><td>2026-09-17</td><td>Brand personality</td><td>Precise/Minimalist/Fast · Sharp/Confident/Focused · Clear/Calm/Organized</td><td><strong>Clear, Calm, Organized</strong> — friendlier and less intimidating for solo devs and creators</td><td>Done — confirmed</td></tr>
+          <tr><td>2026-09-17</td><td>Visual identity</td><td>Palette options: Soft Light, Calm Dark, Warm Paper</td><td><strong>Calm Dark</strong> — native feel for developers who live in dark editors; accents pop on the dark base</td><td>Done — confirmed</td></tr>
+          <tr><td>2026-09-17</td><td>Product name &amp; tagline</td><td>PromptVault, PromptNest, Promptly</td><td><strong>Promptly</strong> — "Find the right prompt — fast, every time." Crisp, easy to say, emphasizes the speed promise</td><td>Done — confirmed</td></tr>
+          <tr><td>2026-09-17</td><td>Landing page architecture</td><td>8-section outline options; hero headline variants; testimonials vs. trust notes</td><td>Approved outline with hero headline "Find the right prompt — fast, every time." Social proof kept light (no fake testimonials)</td><td>Done — confirmed</td></tr>
+          <tr><td>2026-09-17</td><td>Base shell + design tokens</td><td>N/A — spec approved in §3.1</td><td>Implemented semantic shell (<code>header</code>/<code>main</code>/<code>footer</code>), Sora + Geist from Google Fonts, and all color/typography/spacing/radius tokens in <code>style.css :root</code>. No components yet.</td><td>Done — validated, all checks pass</td></tr>
+          <tr><td>2026-09-17</td><td>Stage 5 all layers</td><td>Content sections + professional component + motion budget quality audit</td><td>Implemented Problem/Solution/Features/Social Proof/Final CTA + Footer sections, three-feature-card grid, interactive prompt card with working Copy microinteraction, and scroll reveal via IntersectionObserver. Quality audit verified token usage, structural balance, and no console errors. Stage 5 complete.</td><td>Done — final quality audit pass</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section 6 -->
+    <section class="card">
+      <h2>6. Discovery Notes &amp; Open Questions</h2>
+
+      <h3>6.1 Discovery Interview — Summary (2026-09-17)</h3>
+      <p><strong>Frustrations.</strong> Tracking prompts across software, mobile, and game development (Unity, Godot, Unreal Engine, Blender); difficulty finding reliable help.</p>
+      <p><strong>Areas of expertise.</strong> Coding, technology, professional work, game development.</p>
+      <p><strong>People to help.</strong> Primarily the founder; secondarily freelancers.</p>
+      <p><strong>Observed freelancer pain points.</strong> Inconsistent AI output; significant time spent crafting prompts; difficulty billing for prompt-related work; no client-facing workflow for prompts.</p>
+      <p><strong>Current setup.</strong> Prompts stored in local files and folders — disorganized and scattered.</p>
+      <p><strong>Desired capabilities.</strong> Prompt templates; search and filter; version history; in-app prompt execution (deferred to a later stage).</p>
+      <p><strong>Form factor.</strong> Browser-based web application.</p>
+      <p><strong>Technical direction.</strong> Frontend-only. Note: safely calling AI APIs requires a small backend to protect API keys; API integration is deferred.</p>
+
+      <h3>6.2 Open Questions</h3>
+      <p>Remaining points under consideration; items cut in the v1 scoping stay off the table unless revisited deliberately.</p>
+      <ul>
+        <li>Whether prompts should support placeholders / variables (e.g., <code>{{task}}</code>)</li>
+        <li>Placement of the search box and save form in the single-page layout</li>
+        <li>How far Promptly will grow beyond the Save → Search → Copy loop</li>
+      </ul>
+
+      <h3>6.3 Working Briefs for OpenCode</h3>
+      <p><em>Documented as decisions are finalized.</em></p>
+
+      <h3>6.4 Task Register</h3>
+      <table>
+        <thead><tr><th>Status</th><th>Task</th></tr></thead>
+        <tbody>
+          <tr><td>Done</td><td>Define core problem statement and audience (discovery interview)</td></tr>
+          <tr><td>Done</td><td>Evaluate concept against the 5-Point Idea Filter</td></tr>
+          <tr><td>Done</td><td>Draft, confirm, and document the Founder Decision</td></tr>
+          <tr><td>Done</td><td>Challenge review + scope-down to the v1 core loop (Save → Search → Copy)</td></tr>
+          <tr><td>Done</td><td>Decide product name and brand identity (Promptly)</td></tr>
+          <tr><td>Done</td><td>Select color palette and typography (Calm Dark)</td></tr>
+          <tr><td>Done</td><td>Approve landing page architecture outline</td></tr>
+          <tr><td>Done</td><td>Write base shell mini-spec (MISSION.md §3.1)</td></tr>
+          <tr><td>Done</td><td>Create base shell feature spec (SPECS/2026-09-17-base-shell/)</td></tr>
+          <tr><td>Done</td><td>Implement base shell + design tokens</td></tr>
+          <tr><td>Done</td><td>Build responsive hero and navigation components</td></tr>
+          <tr><td>Done</td><td>Draft website copy for the hero section</td></tr>
+          <tr><td>Done</td><td>Implement feature showcase sections (Problem, Solution, Features, Proof, CTA, Footer)</td></tr>
+          <tr><td>Done</td><td>Add interactive elements and conversion forms (scroll reveal, Copy microinteraction)</td></tr>
+          <tr><td>Done</td><td>Final visual polish and responsive testing — site live at <code>https://savageexit-idiomdynamic-3000.codio.io/</code></td></tr>
+          <tr><td>Done</td><td>Build v1 Milestone 1 — prompt library: save form + saved list + per-card Copy, persisted in <code>localStorage</code> (SPECS/2026-09-18-prompt-library/)</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <p class="footer-note">© 2026 Promptly · Founder Notebook</p>
+  </main>
+</body>
+</html>
