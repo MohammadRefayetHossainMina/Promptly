@@ -10,6 +10,16 @@
 
 ---
 
+## Project Links
+
+| Item | Link |
+| :--- | :--- |
+| **Startup Name** | Promptly |
+| **GitHub Repository** | https://github.com/MohammadRefayetHossainMina/Promptly |
+| **Deployed Site** | https://savageexit-idiomdynamic-3000.codio.io/ |
+
+---
+
 ## 1. Vision & Problem Discovery
 
 *Foundation: Knowledge → Problem → Solution → Value → Product*
