@@ -16,6 +16,7 @@
 | :--- | :--- |
 | **Startup Name** | Promptly |
 | **GitHub Repository** | https://github.com/MohammadRefayetHossainMina/Promptly |
+| **GitHub Pages** | https://mohammadrefayethossainmina.github.io/Promptly/ |
 | **Deployed Site** | https://savageexit-idiomdynamic-3000.codio.io/ |
 
 ---
