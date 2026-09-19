@@ -3,16 +3,16 @@
    ============================================= */
 
 :root {
-  /* Colors — Calm Dark palette */
-  --color-background:    #1E2024;
-  --color-surface:       #2A2D33;
-  --color-surface-hover: #2A2D33;
-  --color-border:        #3A3F47;
-  --color-primary:       #7FA6C9;
-  --color-accent:        #6EC6B8;
-  --color-accent-hover:  #89D8D1;
-  --color-text:          #E8EAED;
-  --color-text-muted:    #9AA0A9;
+  /* Colors — Grape & Lemon palette */
+  --color-background:    #EEEEEE;
+  --color-surface:       rgba(149, 100, 221, 0.22);
+  --color-surface-hover: rgba(149, 100, 221, 0.22);
+  --color-border:        rgba(62, 15, 141, 0.25);
+  --color-primary:       #3E0F8D;
+  --color-accent:        #E4DA72;
+  --color-accent-hover:  #EFE8A0;
+  --color-text:          #3E0F8D;
+  --color-text-muted:    rgba(62, 15, 141, 0.7);
 
   /* Typography */
   --font-heading: 'Sora', sans-serif;
@@ -83,7 +83,7 @@ a {
 
 .btn-primary {
   background-color: var(--color-accent);
-  color: var(--color-background);
+  color: var(--color-primary);
 }
 
 .btn-primary:hover {
@@ -158,7 +158,7 @@ a {
   font-family: var(--font-heading);
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--color-accent);
+  color: var(--color-primary);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-btn);
   letter-spacing: 0.04em;
@@ -171,7 +171,7 @@ a {
 }
 
 .hero-accent {
-  color: var(--color-accent);
+  color: var(--color-primary);
 }
 
 .hero-sub {
@@ -296,7 +296,7 @@ a {
   font-family: var(--font-heading);
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--color-accent);
+  color: var(--color-primary);
 }
 
 .feature-name {
@@ -383,6 +383,7 @@ a {
 /* Copied feedback on a button (microinteraction) */
 .btn-copied {
   background-color: var(--color-primary);
+  color: var(--color-background);
 }
 
 /* =============================================
@@ -442,7 +443,7 @@ a {
 .form-note {
   min-height: 1.2em;
   font-size: 0.85rem;
-  color: var(--color-accent);
+  color: var(--color-primary);
 }
 
 .saved {

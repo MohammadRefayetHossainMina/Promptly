@@ -1,10 +1,12 @@
-# Founder Notebook
+# Founder Notebook — Promptly
 
 **Owner:** Founder (lead decision-maker)
-**Status:** Active — founder decision confirmed
+**Status:** Active
 **Last updated:** 2026-09-17
 
-This document is the single source of truth for this startup project. It defines the concept, records decisions, and serves as the working brief that guides OpenCode across all stages of the build.
+> This document is the single source of truth for the Promptly startup project.
+> It defines the concept, records decisions, and serves as the working brief that
+> guides OpenCode across all stages of the build.
 
 ---
 
@@ -16,40 +18,45 @@ This document is the single source of truth for this startup project. It defines
 Developer productivity — prompt management for creative and development workflows.
 
 ### 1.2 Target Audience
-- **Primary:** Yourself — a developer working across software development, mobile applications, and game engines (Unity, Godot, Unreal Engine), in addition to 3D creation in Blender.
-- **Secondary:** Freelance developers and creators who juggle the same set of tools and lose productive prompts in the process.
+
+| Tier | Audience |
+| :--- | :--- |
+| **Primary** | The founder — a developer working across software development, mobile applications, and game engines (Unity, Godot, Unreal Engine), plus 3D creation in Blender. |
+| **Secondary** | Freelance developers and creators who use the same set of tools and lose productive prompts in the process. |
 
 ### 1.3 Core Problem
-Prompt sprawl. Prompts for different AI tools (ChatGPT, Cursor, Gemini) and across different domains (application code, mobile apps, game development, 3D models) are scattered across disorganized local files. There is no established structure, no reusable templates, and no version history. Reusing a proven prompt requires searching through messy folders or writing a new one from memory.
+**Prompt sprawl.** Prompts for different AI tools (ChatGPT, Cursor, Gemini) and across different domains (application code, mobile apps, game development, 3D models) are scattered across disorganized local files. There is no structure, no reusable templates, and no version history. Reusing a proven prompt means searching through messy folders or rewriting it from memory.
 
-**v1 framing:** The pain expressed as a single loop — *remember → find → copy*. You forget the good prompts you already wrote, can't find them when you need them, and lose time getting them back into your AI tools.
+> **v1 Framing:** A single, repetitive loop — *remember → find → copy*. The founder forgets the good prompts already written, cannot find them when needed, and loses time restoring them into AI tools.
 
 ### 1.4 Proposed Solution
-A personal Prompt Library — a frontend-only web application to organize, tag, search, and version prompts, with reusable templates organized by domain, engine, or task type.
+A personal Prompt Library — a frontend-only web application to save, tag, search, and reuse prompts, with reusable templates organized by domain, engine, or task type.
 
-**v1 scope:** A one-page prompt library built around the core loop **Save → Search → Copy** — store a prompt with a title, search saved prompts instantly, copy any prompt to the clipboard with one click. Persisted in `localStorage`. No backend, no accounts.
+> **v1 Scope:** A one-page prompt library built around the core loop **Save → Search → Copy** — save a prompt with a title, search all saved prompts instantly, and copy a prompt to the clipboard in one click. Persisted in `localStorage`. No backend, no accounts.
 
 ### 1.5 Value Proposition
-A document, wiki, or notes app functions only as a place to store text. The Prompt Library is a structured workspace designed around the actual workflow of using prompts: finding the right prompt quickly, adapting it from a template, and retaining the history of what worked — all without a backend and without exposing API keys.
+A document, wiki, or notes app only *stores text*. Promptly is a structured workspace designed around the real workflow of using prompts: finding the right prompt quickly, adapting it from a template, and retaining the history of what worked — all without a backend and without exposing API keys.
 
 ### 1.6 Idea Filter Evaluation (5-Point)
 
 | Criterion | Assessment | Verdict |
 | :--- | :--- | :--- |
-| User (Who?) | Specific group: developers and creators who juggle multiple AI tools (ChatGPT, Cursor, Gemini) across software, mobile, and game engines (Unity, Godot, Unreal, Blender) | Pass |
-| Problem (What hurts?) | Prompt sprawl — good prompts buried in disorganized local files, rebuilt from scratch each time, no templates or history | Pass |
-| Value (Why care?) | Find the right prompt in seconds, adapt from a template, keep a history of what worked — saves time and keeps output consistent | Pass |
-| Feasibility (Can you showcase it?) | Core mechanics (organize, tag, search, version) are demonstrable in a frontend-only UI prototype with localStorage | Pass |
-| Clarity (Can you pitch it?) | "A prompt library that organizes, searches, and versions your AI prompts" — one jargon-free sentence | Pass |
+| **User** (Who?) | Specific group: developers and creators juggling multiple AI tools (ChatGPT, Cursor, Gemini) across software, mobile, and game engines (Unity, Godot, Unreal, Blender) | Pass |
+| **Problem** (What hurts?) | Prompt sprawl — proven prompts buried in disorganized local files, rebuilt from scratch each time, with no templates or history | Pass |
+| **Value** (Why care?) | Find the right prompt in seconds, adapt from a template, and keep a history of what worked — saves time and keeps output consistent | Pass |
+| **Feasibility** (Can you showcase it?) | Core mechanics (organize, search, copy) are demonstrable in a frontend-only UI prototype with `localStorage` | Pass |
+| **Clarity** (Can you pitch it?) | "A prompt library that saves, searches, and copies your AI prompts" — one jargon-free sentence | Pass |
 
 ### 1.7 Scoped-Down v1 (confirmed 2026-09-17)
 
-After challenge review, the concept was deliberately cut back. Cut from v1: version history, template packages per engine (Unity/Godot/Unreal/Blender), tags and folders, freelancer-facing workflows, API integration.
+Following challenge review, the concept was deliberately reduced. **Cut from v1:** version history, per-engine template packages (Unity/Godot/Unreal/Blender), tags and folders, freelancer-facing workflows, and API integration.
 
-- **Target Audience (refined persona):** Yourself — a solo developer and creator working across software, mobile, and game projects (Unity, Godot, Unreal, Blender) who relies on several AI tools (ChatGPT, Cursor, Gemini) and keeps losing or rewriting its best prompts. *Freelancers are a possible future audience, not a v1 target.*
-- **Core Feature (the single most essential function):** The Save → Search → Copy loop — store a prompt with a title, search all saved prompts instantly, copy the right one to the clipboard with one click. Data lives in `localStorage`.
-- **Primary CTA:** The **Copy** button on every saved prompt — one click copies the prompt text to the clipboard so it can be pasted straight into ChatGPT, Cursor, or Gemini. Secondary action: **Save Prompt** to add a new entry.
-- **20-Second Pitch:** *"A personal library for your best AI prompts. Save a prompt once, find it again in seconds, and copy it into ChatGPT, Cursor, or Gemini with one click — all of it stays in your browser, with no account and no backend."*
+| Element | Confirmed v1 Decision |
+| :--- | :--- |
+| **Audience** | The founder — a solo developer and creator across software, mobile, and game projects (Unity, Godot, Unreal, Blender), relying on several AI tools (ChatGPT, Cursor, Gemini), who keeps losing or rewriting the best prompts. Freelancers are a possible future audience, not a v1 target. |
+| **Core feature** | The Save → Search → Copy loop — save a prompt with a title, search all saved prompts instantly, copy the right one to the clipboard in one click. Data persists in `localStorage`. |
+| **Primary CTA** | The **Copy** button on every saved prompt — one click copies the prompt text for pasting into ChatGPT, Cursor, or Gemini. Secondary action: **Save Prompt**. |
+| **20-Second Pitch** | *"A personal library for your best AI prompts. Save a prompt once, find it again in seconds, and copy it into ChatGPT, Cursor, or Gemini with one click — everything stays in your browser, with no account and no backend."* |
 
 ---
 
@@ -59,7 +66,7 @@ After challenge review, the concept was deliberately cut back. Cut from v1: vers
 
 **Status:** Confirmed 2026-09-17 after passing the 5-Point Idea Filter.
 
-This statement is the single source of truth for product direction and prevents feature creep during the build. Any future change in direction must be recorded in the Decision Log first.
+This statement is the single source of truth for product direction and prevents feature creep during the build. Any future change of direction must be recorded in the Decision Log first.
 
 ---
 
@@ -67,166 +74,173 @@ This statement is the single source of truth for product direction and prevents 
 
 *Locked in 2026-09-17. Every design decision traces back to the brand personality words below.*
 
-### Personality / Tone of Voice
+### Brand Personality / Tone of Voice
 **Clear, Calm, Organized** — the UI feels focused and uncluttered, friendly to a solo developer working across dev, mobile, and game tools.
 
 - **Product Name:** **Promptly**
 - **Tagline:** *"Find the right prompt — fast, every time."*
 
 ### Color Palette (Option 2 — "Calm Dark")
+
 | Token | Hex |
 | :--- | :--- |
 | Background | `#1E2024` |
 | Surface / Card | `#2A2D33` |
 | Primary | `#7FA6C9` (soft blue) |
 | Accent | `#6EC6B8` (muted teal) |
-| Text (Primary) | `#E8EAED` |
-| Text (Muted) | `#9AA0A9` |
+| Text (primary) | `#E8EAED` |
+| Text (muted) | `#9AA0A9` |
 
 ### Typography
-- **Heading font:** Sora (modern, friendly, slightly geometric)
-- **Body font:** Geist (clean, neutral, highly readable)
+
+| Role | Font |
+| :--- | :--- |
+| Headings | Sora — modern, friendly, slightly geometric |
+| Body | Geist — clean, neutral, highly readable |
 
 ### Button Styles
 
-There are two kinds of buttons. Use the same style everywhere so the site looks consistent.
+Two button styles are used consistently across the site.
 
-**Primary button** — the main action on the page (like "Save Prompt" or "Copy").
+**Primary button** — the main action (e.g., "Save Prompt", "Copy").
+
 - Teal background (`#6EC6B8`), dark text (`#1E2024`)
-- Rounded corners (10px), comfortably sized with padding
+- Rounded corners (10px), comfortably sized padding
 
-**Secondary button** — a lesser action, like "Cancel" or a link-style button.
-- No background (transparent), just a thin gray outline (`#3A3F47`)
+**Secondary button** — a lesser action (e.g., "Cancel") or a link-style button.
+
+- Transparent background, thin gray outline (`#3A3F47`)
 - Light text (`#E8EAED`)
 
-**When you hover (mouse over) a button:**
-- Primary buttons get slightly lighter in color
-- Secondary buttons fill in with a light gray background (`#2A2D33`)
-- Both change smoothly in about 0.15 seconds — not instantly, not slowly
+**Hover behavior:**
 
-Rule of thumb: if you're not sure, err on consistency. Same colors, same corners, same hover feel everywhere.
+- Primary buttons get slightly lighter
+- Secondary buttons fill with a light gray background (`#2A2D33`)
+- Both transition smoothly in ~0.15s
+
+Rule of thumb: when unsure, err on consistency — same colors, same corners, same hover feel everywhere.
 
 ### Geometry & Layout Rules
 
-**Corner roundness (border radius):**
-- Cards and buttons get rounded corners of `10px`
-- Large containers (like the main page panel) get slightly rounder corners of `14px`
-- Small things stay subtly rounded so nothing looks blobby
-
-**Spacing:** always use a number from this list when deciding how far apart elements sit:
-`4px, 8px, 16px, 24px, 32px, 48px`
-
-If you're about to use a gap that's not on this list, pick the closest one instead. This keeps spacing consistent across the whole site.
-
-**Consistency rule:** every part of the site reuses these same corners, spacing, colors, and fonts. No page ever gets different values just for variety.
+- **Corner roundness:** cards and buttons use `10px`; large containers (e.g., the main page panel) use `14px`; small elements stay subtly rounded.
+- **Spacing:** use only values from this scale — `4px, 8px, 16px, 24px, 32px, 48px`.
+- **Consistency:** every section reuses the same corners, spacing, colors, and fonts.
 
 ---
 
-## 3.1 Base Shell — CSS Token Mini-Spec
+### 3.1 Base Shell — CSS Token Mini-Spec
 
-*Approved 2026-09-17. This is the spec for the base shell: `index.html` shell and `style.css` design tokens. Every component built later must use these variables — never hardcoded values. Feature spec approved 2026-09-17 — see `SPECS/2026-09-17-base-shell/` (requirements.md, plan.md, validation.md).*
+*Approved 2026-09-17. Specifies the base shell: `index.html` shell and `style.css` design tokens. Every component built later must use these variables — never hardcoded values. Feature spec: `SPECS/2026-09-17-base-shell/` (requirements.md, plan.md, validation.md).*
 
-**Goal of the base shell:** a clean, semantic HTML skeleton plus the full set of CSS variables, ready for the Navbar and Hero (Layer 2). No components yet — just the foundation.
+**Goal:** a clean, semantic HTML skeleton plus the full set of CSS variables, ready for the Navbar and Hero (Layer 2). No components yet — just the foundation.
 
-### Fonts (loaded from Google Fonts in `<head>`)
-- **`--font-heading`:** `'Sora', sans-serif` — headings only
-- **`--font-body`:** `'Geist', sans-serif` — body text
-- Load both with `display=swap`. Fallbacks: `sans-serif`.
+#### Fonts (loaded from Google Fonts in `<head>`)
 
-### Color Tokens
-| CSS variable              | Value      | Use                      |
-| :------------------------ | :--------- | :----------------------- |
-| `--color-background`      | `#1E2024`  | page background          |
-| `--color-surface`         | `#2A2D33`  | cards, panels            |
-| `--color-surface-hover`   | `#2A2D33`  | secondary button hover fill |
-| `--color-border`          | `#3A3F47`  | secondary button outline |
-| `--color-primary`         | `#7FA6C9`  | links, highlights        |
-| `--color-accent`          | `#6EC6B8`  | primary buttons, key accents |
-| `--color-accent-hover`    | lighter than `#6EC6B8` | primary button hover |
-| `--color-text`            | `#E8EAED`  | primary text             |
-| `--color-text-muted`      | `#9AA0A9`  | secondary text           |
+- `--font-heading: 'Sora', sans-serif` — headings only
+- `--font-body: 'Geist', sans-serif` — body text
+- Load both with `display=swap`; fallback `sans-serif`.
 
-### Spacing Scale
+#### Color Tokens
+
+| CSS variable | Value | Use |
+| :--- | :--- | :--- |
+| `--color-background` | `#1E2024` | page background |
+| `--color-surface` | `#2A2D33` | cards, panels |
+| `--color-surface-hover` | `#2A2D33` | secondary button hover fill |
+| `--color-border` | `#3A3F47` | secondary button outline |
+| `--color-primary` | `#7FA6C9` | links, highlights |
+| `--color-accent` | `#6EC6B8` | primary buttons, key accents |
+| `--color-accent-hover` | lighter than `#6EC6B8` | primary button hover |
+| `--color-text` | `#E8EAED` | primary text |
+| `--color-text-muted` | `#9AA0A9` | secondary text |
+
+#### Spacing Scale
+
 | CSS variable | Value |
-| :----------- | :---- |
-| `--space-1`  | `4px` |
-| `--space-2`  | `8px` |
-| `--space-3`  | `16px`|
-| `--space-4`  | `24px`|
-| `--space-5`  | `32px`|
-| `--space-6`  | `48px`|
+| :--- | :--- |
+| `--space-1` | `4px` |
+| `--space-2` | `8px` |
+| `--space-3` | `16px` |
+| `--space-4` | `24px` |
+| `--space-5` | `32px` |
+| `--space-6` | `48px` |
 
 Use only these six values for gaps and margins.
 
-### Border Radius
-| CSS variable    | Value | Use              |
-| :-------------- | :---- | :--------------- |
-| `--radius-btn`  | `10px`| cards + buttons  |
-| `--radius-box`  | `14px`| large containers, main panel |
+#### Border Radius
 
-### Buttons (matching §3 Button Styles)
-- **Primary:** surface `--color-accent`, text `--color-background`, radius `var(--radius-btn)`; hover slightly lighter, transition `150ms`.
-- **Secondary:** transparent background, 1px outline `--color-border`, text `--color-text`; hover fills with `--color-surface-hover`, transition `150ms`.
+| CSS variable | Value | Use |
+| :--- | :--- | :--- |
+| `--radius-btn` | `10px` | cards + buttons |
+| `--radius-box` | `14px` | large containers, main panel |
 
-### Base Shell Requirements
+#### Buttons
+
+- **Primary:** background `--color-accent`, text `--color-background`, radius `var(--radius-btn)`; hover slightly lighter, `150ms` transition.
+- **Secondary:** transparent background, 1px outline `--color-border`, text `--color-text`; hover fills with `--color-surface-hover`, `150ms` transition.
+
+#### Base Shell Requirements
+
 - Semantic shell only: `<header>`, `<main>`, `<footer>` placeholders in `index.html`; no section content yet.
 - `index.html` loads Sora + Geist from Google Fonts in `<head>`, then `style.css`.
-- `style.css` defines all tokens above in `:root` plus a light reset (box-sizing, margins, body defaults tied to the tokens).
-- Confirm the shell renders with the dark `#1E2024` background and heading font Sora.
+- `style.css` defines all tokens above in `:root` plus a light reset (box-sizing, margins, body defaults tied to tokens).
+- Shell renders with the dark `#1E2024` background and Sora headings.
 
 ---
 
 ## 4. Website Structure & Page Architecture
 
-*Approved 2026-09-17 — see the full outline in the **Page Architecture** section below.*
+*Approved 2026-09-17 — see the full section-by-section outline below.*
 
-- **Primary Goal / Conversion Action:** Open the app and save their first prompt. Primary button reads **Save Prompt**; every card carries a **Copy** button for one-click use.
-- **Page Sections:** Approved 8-section outline (Navbar → Hero → Problem → Solution → Features → Social Proof → Final CTA → Footer).
-
----
-
-## Page Architecture
-
-*Approved outline for the landing page (2026-09-17). Every heading below is a draft to refine during the build.*
+- **Primary Goal / Conversion Action:** Open the app and save the first prompt. Primary button reads **Save Prompt**; every card carries a **Copy** button for one-click use.
+- **Sections:** Navbar → Hero → Problem → Solution → Features → Social Proof → Final CTA → Footer.
 
 ### Navbar
-- **Content:** Logo "Promptly" + tagline mark, one link ("Add a prompt"), and the primary **Save Prompt** button.
-- **Why:** One action, no clutter — matches the brand personality words (Clear, Calm, Organized).
+
+- Logo "Promptly" + tagline mark, one link ("Add a prompt"), and the primary **Save Prompt** button.
+- **Why:** one action, no clutter — matches the brand personality (Clear, Calm, Organized).
 
 ### Hero
+
 > **Headline:** *Find the right prompt — fast, every time.*
 - **Subheadline:** "Promptly is a personal library for your AI prompts. Save one once, search it in seconds, and copy it into ChatGPT, Cursor, or Gemini with one click."
 - **CTA:** **Save your first prompt** — scrolls the visitor to the library.
 - **Supporting visual:** a small mock of a prompt card with a Copy button.
 
 ### Problem
+
 > **Headline:** *Where did that prompt go?*
-- Bullet 1: Great prompts are scattered across messy local files — and rebuilt from memory every time.
-- Bullet 2: The loop that wastes your time: *remember → find → copy*.
+- Proven prompts are scattered across messy local files — and rebuilt from memory every time.
+- The waste loop: *remember → find → copy*.
 
 ### Solution
+
 > **Headline:** *One home for every prompt that works.*
-- Bullet 1: Save a prompt once with a clear title; search everything instantly; copy it back into any AI tool with one click.
-- Bullet 2: Everything stays in your browser — no account, no backend, no one reading your prompts.
+- Save a prompt once with a clear title; search everything instantly; copy it into any AI tool with one click.
+- Everything stays in the browser — no account, no backend, no one reading the prompts.
 
 ### Features (three value pillars)
+
 > **Headline:** *Save, find, copy — the whole loop in three moves.*
 1. **Save in seconds** — title + text, done. Your library persists automatically in your browser.
-2. **Search instantly** — start typing a keyword and prompts filter as you type.
+2. **Search instantly** — start typing and prompts filter as you type.
 3. **Copy with one click** — paste straight into ChatGPT, Cursor, or Gemini.
 
 ### Social Proof (kept light — no fake testimonials)
+
 > **Headline:** *Built for a workflow that actually works.*
-- Bullet 1: "No account. Runs in your browser."
-- Bullet 2: Positioning chip: *For developers, makers, and game creators.*
+- "No account. Runs in your browser."
+- Positioning chip: *For developers, makers, and game creators.*
 
 ### Final CTA
+
 > **Headline:** *Start your library today.*
 - **Subheadline:** "Save your first prompt, find it in seconds, copy it anywhere."
 - **Button:** **Save Prompt**.
 
 ### Footer
-- **Content:** Copyright "Promptly", tagline line, links back to sections (Problem, Features).
+
+- Copyright "Promptly", tagline, and links back to sections (Problem, Features).
 
 ---
 
@@ -237,14 +251,14 @@ Use only these six values for gaps and margins.
 | Date | Topic | Options Considered | Final Decision & Rationale | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | 2026-09-17 | Problem to explore | Prompt sprawl across dev/game tools; alternative ideas surfaced during discovery interview | Prompt Library — aligns with personal pain, existing domain expertise, and a clear gap in current tooling | Done — confirmed |
-| 2026-09-17 | Founder Decision | Positioning statement wording variants | "We help developers and creators who struggle with scattered, disorganized AI prompts by providing a personal prompt library, helping them find and reuse their best prompts in seconds." — passed 5-Point Idea Filter | Done — confirmed |
-| 2026-09-17 | v1 scope-down | Full feature set (templates, versioning, tags, API) vs. minimum core loop | Save → Search → Copy only; version history, per-engine templates, tags/folders, API integration deferred or cut | Done — confirmed |
-| 2026-09-17 | Brand personality | Precise/Minimalist/Fast vs Sharp/Confident/Focused vs Clear/Calm/Organized | **Clear, Calm, Organized** — friendlier and less intimidating for solo devs and creators | Done — confirmed |
-| 2026-09-17 | Visual identity | Palette options: Soft Light, Calm Dark, Warm Paper | **Calm Dark** — native feel for developers who live in dark editors; accents pop on dark base | Done — confirmed |
+| 2026-09-17 | Founder decision | Wording variants for the positioning statement | "We help developers and creators who struggle with scattered, disorganized AI prompts by providing a personal prompt library, helping them find and reuse their best prompts in seconds." — passed the 5-Point Idea Filter | Done — confirmed |
+| 2026-09-17 | v1 scope-down | Full feature set (templates, versioning, tags, API) vs. minimum core loop | Save → Search → Copy only; version history, per-engine templates, tags/folders, and API integration deferred or cut | Done — confirmed |
+| 2026-09-17 | Brand personality | Precise/Minimalist/Fast · Sharp/Confident/Focused · Clear/Calm/Organized | **Clear, Calm, Organized** — friendlier and less intimidating for solo devs and creators | Done — confirmed |
+| 2026-09-17 | Visual identity | Palette options: Soft Light, Calm Dark, Warm Paper | **Calm Dark** — native feel for developers who live in dark editors; accents pop on the dark base | Done — confirmed |
 | 2026-09-17 | Product name & tagline | PromptVault, PromptNest, Promptly | **Promptly** — "Find the right prompt — fast, every time." Crisp, easy to say, emphasizes the speed promise | Done — confirmed |
 | 2026-09-17 | Landing page architecture | 8-section outline options; hero headline variants; testimonials vs. trust notes | Approved outline with hero headline "Find the right prompt — fast, every time." Social proof kept light (no fake testimonials) | Done — confirmed |
 | 2026-09-17 | Base shell + design tokens | N/A — spec approved in §3.1 | Implemented semantic shell (`header`/`main`/`footer`), Sora + Geist from Google Fonts, and all color/typography/spacing/radius tokens in `style.css :root`. No components yet. | Done — validated, all checks pass |
-| 2026-09-17 | Stage 5 all layers | Content sections + professional component + motion budget quality audit | Implemented Problem/Solution/Features/Social Proof/Final CTA + Footer sections, three-feature-card grid, interactive prompt card with working Copy microinteraction, and scroll reveal via IntersectionObserver; quality audit verified: correct token usage, structural balance, no console errors. Stage 5 fully complete. | Done — final quality audit pass |
+| 2026-09-17 | Stage 5 all layers | Content sections + professional component + motion budget quality audit | Implemented Problem/Solution/Features/Social Proof/Final CTA + Footer sections, three-feature-card grid, interactive prompt card with working Copy microinteraction, and scroll reveal via IntersectionObserver. Quality audit verified token usage, structural balance, and no console errors. Stage 5 complete. | Done — final quality audit pass |
 
 ---
 
@@ -254,9 +268,9 @@ Use only these six values for gaps and margins.
 
 **Frustrations.** Tracking prompts across software, mobile, and game development (Unity, Godot, Unreal Engine, Blender); difficulty finding reliable help.
 
-**Areas of expertise / involvement.** Coding, technology, professional work, game development.
+**Areas of expertise.** Coding, technology, professional work, game development.
 
-**People intended to help.** Primarily yourself; secondarily freelancers.
+**People to help.** Primarily the founder; secondarily freelancers.
 
 **Observed freelancer pain points.** Inconsistent AI output; significant time spent crafting prompts; difficulty billing for prompt-related work; no client-facing workflow for prompts.
 
@@ -266,38 +280,37 @@ Use only these six values for gaps and margins.
 
 **Form factor.** Browser-based web application.
 
-**Technical direction.** Frontend-only. Note: safely calling AI APIs requires a small backend to protect API keys; current decision is to defer API integration.
+**Technical direction.** Frontend-only. Note: safely calling AI APIs requires a small backend to protect API keys; API integration is deferred.
 
 ### 6.2 Open Questions
 
-Remaining points under consideration; the items cut in the v1 scoping are off the table unless revisited deliberately:
+Remaining points under consideration; items cut in the v1 scoping stay off the table unless revisited deliberately.
 
-- [ ] Product name and brand identity
 - [ ] Whether prompts should support placeholders / variables (e.g., `{{task}}`)
-- [ ] Where the search box and save form sit in the layout (single page)
-- [ ] How much this tool will grow beyond the Save → Search → Copy loop
+- [ ] Placement of the search box and save form in the single-page layout
+- [ ] How far Promptly will grow beyond the Save → Search → Copy loop
 
 ### 6.3 Working Briefs for OpenCode
 
-*To be documented as decisions are finalized.*
+*Documented as decisions are finalized.*
 
 ### 6.4 Task Register
 
 | Status | Task |
 | :--- | :--- |
-| Done | Define core problem statement and audience (discovery interview, 2026-09-17) |
-| Done | Evaluate concept against the 5-Point Idea Filter (2026-09-17) |
-| Done | Draft, confirm, and document the Founder Decision (2026-09-17) |
-| Done | Challenge review + scope-down to v1 core loop Save → Search → Copy (2026-09-17) |
-| Done | Decide product name and brand identity (Promptly — 2026-09-17) |
-| Done | Select color palette and typography (Calm Dark — 2026-09-17) |
-| Done | Approve landing page architecture outline (2026-09-17) |
-| Done | Write base shell mini-spec (MISSION.md §3.1 — 2026-09-17) |
-| Done | Create base shell feature spec (SPECS/2026-09-17-base-shell/ — 2026-09-17) |
-| Done | Implement base shell + design tokens (Stage 5, Step 1 — calibrated dark palette, all checks pass) |
-| Done | Build responsive hero and navigation components (Navbar + Hero, Stage 5 Step 2 — validated, both URLs respond) |
-| Done | Draft website copy for hero section — built per Page Architecture (hero headline, subheadline, CTA, hero-card) |
-| Done | Implement feature showcase sections — built Problem, Solution, Features, Proof, CTA, and Footer per approved 8-section outline |
-| Done | Add interactive elements and conversion forms — scroll reveal (IntersectionObserver) and Copy-to-clipboard microinteraction |
-| Done | Final visual polish and responsive testing — site live at https://savageexit-idiomdynamic-3000.codio.io/, all tokens consistent, Copy microinteraction working, responsive at mobile + desktop |
-| Done | Build v1 Milestone 1 — prompt library: save form + saved list + per-card Copy, persisted in localStorage (SPECS/2026-09-18-prompt-library/, 2026-09-18) |
+| Done | Define core problem statement and audience (discovery interview) |
+| Done | Evaluate concept against the 5-Point Idea Filter |
+| Done | Draft, confirm, and document the Founder Decision |
+| Done | Challenge review + scope-down to the v1 core loop (Save → Search → Copy) |
+| Done | Decide product name and brand identity (Promptly) |
+| Done | Select color palette and typography (Calm Dark) |
+| Done | Approve landing page architecture outline |
+| Done | Write base shell mini-spec (MISSION.md §3.1) |
+| Done | Create base shell feature spec (SPECS/2026-09-17-base-shell/) |
+| Done | Implement base shell + design tokens |
+| Done | Build responsive hero and navigation components |
+| Done | Draft website copy for the hero section |
+| Done | Implement feature showcase sections (Problem, Solution, Features, Proof, CTA, Footer) |
+| Done | Add interactive elements and conversion forms (scroll reveal, Copy microinteraction) |
+| Done | Final visual polish and responsive testing — site live at `https://savageexit-idiomdynamic-3000.codio.io/` |
+| Done | Build v1 Milestone 1 — prompt library: save form + saved list + per-card Copy, persisted in `localStorage` (SPECS/2026-09-18-prompt-library/) |
